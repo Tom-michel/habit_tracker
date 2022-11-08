@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -13,18 +14,7 @@ class MyApp extends StatelessWidget {
     const String myTitle = "Habit Tracker";
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: myTitle,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            myTitle,
-            style: TextStyle(fontSize: 30, color: Colors.orange),
-          ),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
